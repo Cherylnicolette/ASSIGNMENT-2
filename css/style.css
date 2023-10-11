@@ -1,0 +1,300 @@
+:root {
+    --dark-color: rgb(21, 78, 162);
+    --light-color: rgb(255, 240, 231);
+    --heading-font: 'Titillium Web', sans-serif;
+    --logo-font: 'Dancing Script', cursive;
+    --heading-weight: 600;
+    --body-weight: 400;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: var(--dark-color);
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-family: var(--heading-font);
+    font-weight: var(--body-weight);
+    font-size: 1.0625rem;
+}
+
+nav {
+    background-color: var(--light-color);
+    padding: .625rem;
+    display: flex;
+    justify-content: start;
+    justify-items: center;
+}
+
+nav img {
+    padding-left: 1.25rem;
+    height: 3.75rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+}
+
+nav a:hover {
+    color: rgb(119, 163, 228);
+}
+
+#menu {
+    display: flex;
+    gap: 1.25rem;
+    list-style-type: none;
+    padding-top: 0.25rem;
+}
+
+#menu-toggle {
+    display: none;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+#menu.active {
+    display: flex;
+}
+
+.hero {
+    background-image: url(../images/hero.jpeg);
+    min-height: 25.875rem;
+    background-size: repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1, .hero p {
+    padding: 0rem .625rem;
+    margin: .125rem;
+}
+
+.hero h1 {
+    font-family: var(--logo-font);
+    font-size: 6rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0rem 1.875rem 2rem 1.875rem;
+}
+
+main img {
+    height: 27.375rem;
+    padding-bottom: .9375rem;
+}
+
+section  {
+    background-color: var(--light-color);
+    display: flex;
+    align-items: center;
+    padding: 0rem 1.875rem 0rem 0rem;
+}
+
+section img {
+    width: 40rem;
+    height: auto;
+    margin-right: 1.25rem;
+}
+
+#products h1 {
+    text-align: center;
+    margin: 2.5rem auto;
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 80rem;
+    margin: auto;
+}
+
+.catalog h2, p {
+    text-align: center;
+}
+
+.catalog img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.first, .second, .third, .fourth, .fifth, .sixth, .seventh, .eighth, .ninth {
+    margin: 0rem 1.25rem 3.75rem 1.25rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: .625rem .625rem .9375rem .625rem;
+    margin: .625rem 0rem 0rem 0rem;
+    background-color: var(--dark-color)
+}
+
+footer a {
+    padding-left: .625rem;
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(200, 182, 169);
+}
+
+/*mobile media query*/
+/*max width : 480px is the same as saying if width is less than 840px run this css*/
+
+@media screen and (max-width: 64em) {
+
+    h2 {
+        font-size: 1.375rem;
+    }
+
+    section img {
+        width: 29rem;
+    }
+
+    article p {
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width: 48em) {
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: .9375rem;
+    }
+    
+    .hero h1 {
+        font-size: 5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    main img {
+        height: 23.375rem;
+    }
+
+    section {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    section img {
+        margin-right: 0;
+        width: 48rem;
+    }
+
+    article {
+        text-align: center;
+        padding: 1.5625rem 2.5rem 1.5625rem 2.5rem;
+    }
+
+    .catalog {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .catalog img {
+        height: 19rem;
+    }
+}
+
+@media screen and (max-width: 30em){
+    
+    #menu-toggle {
+        margin-left: .9375rem;
+        display: block;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 3.5rem;
+        right: 21.5rem;
+        background-color: var(--light-color);
+        padding: 1.25rem;
+        border-radius: .625rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.20rem;
+    }
+
+    p {
+        font-size: .875rem;
+    }
+
+    .hero h1 {
+        font-size: 3.75rem;
+    }
+
+    .hero p {
+        margin: .625rem 1.25rem .625rem 1.25rem;
+    }
+
+    main img {
+        height: 20rem;
+    }
+
+    section {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    section img {
+        width: auto;
+        height: 21.4375rem;
+    }
+
+    .catalog {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog img {
+        height: 20rem;
+    }
+
+    .catalog p {
+        font-size: .875rem;
+    }
+}
+
